@@ -2,4 +2,4 @@
 
 ## See it in action!
 
-![](https://github.com/news-search/gifnews.gif)
+![](https://github.com/NicholasStambaugh/news-search/blob/master/gifnews.gif)
