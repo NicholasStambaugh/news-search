@@ -37,6 +37,6 @@ Open your web browser and go to the following address:
 http://localhost:5000
 ```
 
-Changelog:
+## Changelog:
 
 March 31st - Added sort_by as an option under the search bar.
