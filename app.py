@@ -14,6 +14,15 @@ def index():
 
     return render_template('index.html')
 
+@app.route('/results', methods=['GET'])
+def results():
+    query = request.args.get('q')
+    api_key = newsapi
+    url = f'https://newsapi.org/v2/everything?q={query}&apiKey={api_key}'
+    response = requests.get(url)
+    articles = response.json()['articles']
+    return render_template('results.html', articles=articles)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
