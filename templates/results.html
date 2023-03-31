@@ -1,8 +1,8 @@
-<!-- index.html -->
+<!-- results.html -->
 <!DOCTYPE html>
 <html>
 <head>
-	<title>News Search</title>
+	<title>Search results</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 	<style>
@@ -65,31 +65,22 @@
 </head>
 <body>
 	<div class="container mt-4">
-		<h1 class="mb-4">Easy News Search 📰</h1>
-		<form action="/" method="POST">
-			<div class="form-group">
-				<label for="query">Search:</label>
-				<input type="text" name="query" id="query" class="form-control">
+		<h1 class="mb-4">Search results</h1>
+      <a href="{{ url_for('index') }}" class="btn btn-secondary mb-4">Home</a>
+		{% for article in articles %}
+			<div class="media mb-4">
+				{% if article.urlToImage %}
+					<img src="{{ article.urlToImage }}" class="align-self-start mr-3" alt="...">
+				{% endif %}
+				<div class="media-body">
+					<h5 class="mt-0">{{ article.title }}</h5>
+					<p>{{ article.description }}</p>
+					<p>By {{ article.author }}</p>
+					<p>Published at {{ article.publishedAt }}</p>
+					<a href="{{ article.url }}" class="btn btn-primary">Read more</a>
+				</div>
 			</div>
-			<div class="form-group">
-				<label for="sort_by">Sort By:</label>
-				<select name="sort_by" id="sort_by" class="form-control">
-					<option value="relevancy">Relevancy 🤔</option>
-					<option value="popularity">Trending 🔥</option>
-					<option value="publishedAt">Most Recent ⏲️</option>
-				</select>
-			</div>
-			<button type="submit" class="btn btn-primary">Search</button>
-		</form>
+		{% endfor %}
 	</div>
-
-    <footer class="footer mt-auto py-3">
-        <div class="container">
-            <span class="text-muted">Created by <a href="https://www.linkedin.com/in/nick-stambaugh-694241139/" target="_blank">Nick Stambaugh</a></span>
-        </div>
-    </footer>
 </body>
-
 </html>
-
-
