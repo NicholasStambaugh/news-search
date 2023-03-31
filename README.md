@@ -11,7 +11,7 @@ Simplified News Searches is a project that uses the NewsAPI.org service to retri
 + Executable/Web: Currently, the project runs locally using Flask. However, I would like to explore the possibility of running the project on a server in the future, or even packaging it as an executable that can be installed on a user's computer.
 
 ## See it in action!
-![](https://github.com/NicholasStambaugh/news-search/blob/master/gif.gif)
+![](https://github.com/NicholasStambaugh/news-search/blob/master/example.gif)
 
 
 ## How to Run Locally Using Github
