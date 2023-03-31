@@ -25,3 +25,6 @@ Run 'app.py':
 ```
 python app.py
 ```
+### Step 3
+
+Go to localhost
