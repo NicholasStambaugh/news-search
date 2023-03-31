@@ -3,35 +3,54 @@
 <html>
 <head>
     <title>News Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <div class="container">
-        <h1>News Search</h1>
-        <form method="POST" action="/">
-            <input type="text" name="query" placeholder="Enter a search term...">
-            <button type="submit">Search</button>
-        </form>
-        {% if query %}
-            <h2>Results for "{{ query }}"</h2>
-            {% if articles %}
-                <ul>
+<div class="container">
+    <h1 class="mt-5 mb-5">News Search</h1>
+    <form method="POST" action="/" class="form-inline mb-5">
+        <div class="input-group">
+            <input type="text" name="query" class="form-control" placeholder="Enter a search term...">
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+    {% if query %}
+        <h2>Results for "{{ query }}"</h2>
+        {% if articles %}
+            <ul class="list-unstyled">
                 {% for article in articles %}
-                    <li>
+                    <li class="media mb-4">
                         {% if article.urlToImage %}
-                            <img src="{{ article.urlToImage }}" alt="Article thumbnail" class="thumbnail">
+                            <img src="{{ article.urlToImage }}" alt="Article thumbnail" class="mr-3 thumbnail">
                         {% endif %}
-                        <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
-                        <p>{{ article.description }}</p>
+                        <div class="media-body">
+                            <h5 class="mt-0 mb-1"><a href="{{ article.url }}">{{ article.title }}</a></h5>
+                            <p>{{ article.description }}</p>
+                        </div>
                     </li>
                 {% endfor %}
-                </ul>
-            {% else %}
-                <p>No results found.</p>
-            {% endif %}
+            </ul>
+        {% else %}
+            <p>No results found.</p>
         {% endif %}
-    </div>
+    {% endif %}
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 
