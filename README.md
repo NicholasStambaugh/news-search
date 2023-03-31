@@ -7,7 +7,7 @@
 + Executable/Web: I'd like this to run on a server one day, or maybe as an executable.
 
 ## See it in action!
-
+![](https://github.com/NicholasStambaugh/news-search/blob/master/gif.gif)
 
 
 ## How to Run Locally Using Github
