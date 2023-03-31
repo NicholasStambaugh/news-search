@@ -1,0 +1,35 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Search results</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+	<style>
+		.media img {
+			max-width: 400px;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container mt-4">
+		<h1 class="mb-4">Search results</h1>
+      <a href="{{ url_for('index') }}" class="btn btn-secondary mb-4">Home</a>
+		{% for article in articles %}
+			<div class="media mb-4">
+				{% if article.urlToImage %}
+					<img src="{{ article.urlToImage }}" class="align-self-start mr-3" alt="...">
+				{% endif %}
+				<div class="media-body">
+					<h5 class="mt-0">{{ article.title }}</h5>
+					<p>{{ article.description }}</p>
+					<p>By {{ article.author }}</p>
+					<p>Published at {{ article.publishedAt }}</p>
+					<a href="{{ article.url }}" class="btn btn-primary">Read more</a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</body>
+</html>
