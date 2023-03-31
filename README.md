@@ -1,4 +1,4 @@
-# Simplified broad News Searches using NewsAPI.org
+# Simplified News Searches using NewsAPI.org
 
 # Things I'd Like To Add
 
