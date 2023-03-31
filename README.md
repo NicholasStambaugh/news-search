@@ -8,19 +8,18 @@
 
 ## See it in action!
 
-![](https://github.com/NicholasStambaugh/news-search/blob/master/gifnews.gif)
 
 
 ## How to Run Locally Using Github
 
-# Step 1
+### Step 1
 
 Run this command using bash:
 ```
 git clone https://github.com/NicholasStambaugh/news-search
 ```
 
-# Step 2
+### Step 2
 
 Run 'app.py':
 ```
