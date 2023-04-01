@@ -14,7 +14,7 @@ Simplified News Searches is a project that uses the NewsAPI.org service to retri
 ![](https://github.com/NicholasStambaugh/news-search/blob/master/example.gif)
 
 
-## How to Run Locally Using Github
+## How to Run Locally
 
 ### Step 1
 
