@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from newsapi import NewsApiClient
 
 app = Flask(__name__)
-newsapi = NewsApiClient(api_key='f39095ae8be4476db173a4fafae9fe53')
+newsapi = NewsApiClient(api_key='enter_your_api_key_here')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
