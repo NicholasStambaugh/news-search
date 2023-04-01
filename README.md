@@ -1,6 +1,6 @@
 # Simplified News Searches using NewsAPI.org
 
-Simplified News Searches is a project that uses the NewsAPI.org service to retrieve news articles from a variety of sources. The goal of the project is to make it easy for users to find news articles from a wide variety of sources. Developed using a flask framework.
+Simplified News Searches is a project that uses the NewsAPI.org service to retrieve news articles from a variety of sources. It is essentially just a frontend/UI to interact with the API. The goal of the project is to make it easy for users to find news articles from a wide variety of sources. Developed using a flask framework.
 
 ## Things I'd Like To Add
 
