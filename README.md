@@ -40,3 +40,5 @@ http://localhost:5000
 ## Changelog:
 
 March 31st - Added sort_by as an option under the search bar.
+
+April 1st - Added article source to news feed.
