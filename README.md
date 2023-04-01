@@ -15,7 +15,7 @@ Simplified News Searches is a project that uses the NewsAPI.org service to retri
 
 ## Before you use
 
-You will need to retrieve an API key from newsapi.org.
+You will need to retrieve an API key from newsapi.org and add it to app.py.
 
 ## How to Run Locally
 
